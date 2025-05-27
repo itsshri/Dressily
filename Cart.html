@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="cart.css" />
+  <style>
+    /* Reset & base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: 700;
+      font-size: 2.5rem;
+      color: #222;
+    }
+
+    /* Cart Table */
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 15px;
+    }
+
+    thead th {
+      text-align: left;
+      font-weight: 600;
+      color: #555;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #ddd;
+    }
+
+    tbody tr {
+      background: #fafafa;
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+    }
+
+    tbody tr td {
+      padding: 15px 10px;
+      vertical-align: middle;
+    }
+
+    /* Product info */
+    .product-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .product-info img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      background: #fff;
+    }
+    .product-name {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #222;
+    }
+
+    /* Price & Quantity */
+    .price {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #1a73e8;
+    }
+    input[type="number"] {
+      width: 60px;
+      padding: 6px 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      text-align: center;
+      transition: border-color 0.3s ease;
+    }
+    input[type="number"]:focus {
+      border-color: #1a73e8;
+      outline: none;
+    }
+
+    /* Remove button */
+    .remove-btn {
+      background: transparent;
+      border: none;
+      color: #ff4d4f;
+      cursor: pointer;
+      font-size: 1.3rem;
+      transition: color 0.3s ease;
+    }
+    .remove-btn:hover {
+      color: #d9363e;
+    }
+
+    /* Summary */
+    .summary {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 2px solid #eee;
+      display: flex;
+      justify-content: flex-end;
+      gap: 40px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .summary div {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .total {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1a73e8;
+    }
+
+    /* Buttons */
+    .actions {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    .continue-btn {
+      background: #eee;
+      color: #555;
+    }
+    .continue-btn:hover {
+      background: #ddd;
+    }
+    .checkout-btn {
+      background: #1a73e8;
+      color: white;
+      box-shadow: 0 5px 15px rgb(26 115 232 / 0.4);
+    }
+    .checkout-btn:hover {
+      background: #155ab6;
+    }
+
+    /* Responsive */
+    @media (max-width: 720px) {
+      .product-info {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .summary {
+        justify-content: center;
+        gap: 20px;
+      }
+      .actions {
+        flex-direction: column;
+        align-items: center;
+      }
+      button {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+     <div class="nav">
+    <div class="logo">Dressily</div>
+    <ul class="nav-links">
+      <li><a href="Boutique.html">Home</a></li>
+      <li><a href="Cart.html">Cart</a></li>
+      <li><a href="Login.html">Login</a></li>
+    </ul>
+  </div>
+  <div class="container">
+    <h1>Your Shopping Cart</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="product-info">
+              <img src="https://assets.ajio.com/medias/sys_master/root/20250417/lq5t/68012f6155340d4b4fe23bb4/-473Wx593H-701471866-brown-MODEL.jpg" alt="Product 1" style="background-size: cover;" />
+              <div class="product-name">Men Regular Fit Shirt</div>
+            </div>
+          </td>
+          <td class="price">₹899.00</td>
+          <td>
+            <input type="number" min="1" value="1" />
+          </td>
+          <td class="price">₹899.00</td>
+          <td>
+            <button class="remove-btn" title="Remove item">&times;</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="product-info">
+              <img src="https://assets.ajio.com/medias/sys_master/root/20240929/A80Z/66f8fe6df9b8ef490b801e4d/-473Wx593H-700507797-navy-MODEL.jpg" alt="Product 2" />
+              <div class="product-name">Men Regular Fit Hoodie</div>
+            </div>
+          </td>
+          <td class="price">₹599.00</td>
+          <td>
+            <input type="number" min="1" value="2" />
+          </td>
+          <td class="price">₹599.00</td>
+          <td>
+            <button class="remove-btn" title="Remove item">&times;</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="summary">
+      <div>Subtotal: <span>$497.00</span></div>
+      <div>Shipping: <span>$10.00</span></div>
+      <div class="total">Total: <span>$507.00</span></div>
+    </div>
+
+    <div class="actions">
+        <a href="Boutique.html">
+            <button class="continue-btn">Continue Shopping</button>
+        </a>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+  <footer id="footer">
+  <div class="col col1">
+    <h3>Dressily</h3>
+    <p>Crafted with <span style="color: #BA6573;">❤</span> by Deepthika</p>
+    <p style="color: #818181; font-size: smaller">2025 © All Rights Reserved</p>
+  </div>
+  <div class="col col2">
+    <p>About</p>
+    <p>Our mission</p>
+    <p>Privacy Policy</p>
+    <p>Terms of service</p>
+  </div>
+  <div class="col col3">
+    <p>Services</p>
+    <p>Products</p>
+    <p>Join our team</p>
+    <p>Partner with us</p>
+  </div>
+  <div class="backdrop"></div>
+</footer>
+</body>
+</html>

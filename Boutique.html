@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dressily</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="nav">
+    <div class="logo">Dressily</div>
+    <ul class="nav-links">
+      <li><a href="Boutique.html">Home</a></li>
+      <li><a href="Cart.html">Cart</a></li>
+      <li><a href="Login.html">Login</a></li>
+    </ul>
+  </div>
+
+  <div class="hero">
+    <h1>Discover Unique Styles</h1>
+    <p>Elegant. Timeless. You.</p>
+    <button>Explore Now</button>
+  </div>
+
+  <div class="container">
+    <br>
+    <br>
+    <h1 class="main-heading">Explore Our Collection</h1>
+    <div class="product-grid">
+
+
+      <div class="card">
+        <img src="https://assets.ajio.com/medias/sys_master/root/20240820/CQ0G/66c439d51d763220fa86917c/-473Wx593H-443056696-navy-MODEL.jpg" alt="Product" />
+       <p class="product-price">MRP <span>₹1,299</span></p>
+        <br>
+        <h3 class="product-title">Men Regular Fit Blue Shirt</h3>
+
+        <!-- rating button  -->
+
+
+     <button class="cool-button">
+  <h1>4.5⭐</h1>
+</button>
+
+<!-- cart button  -->
+
+<button class="cool-button" style="margin-left: 150px; margin-top:-10px; width: 110px; background-color: rgb(240, 128, 175); display: flex; align-items: center; justify-content: space-between; padding: 5px 10px;">
+  
+  <!-- Minus Button -->
+  <span onclick="decrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">−</span>
+
+  <!-- Cart Icon -->
+  <img src="https://img.icons8.com/?size=60&id=59997&format=png" style="width:20px;" />
+
+  <!-- Plus Button -->
+  <span onclick="incrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">+</span>
+  
+</button>
+<p style="margin-right: 190px; font-weight: bold; margin-top: -20px; margin-left: -6px;">Cart : <span id="cart-count">0</span></p>
+      </div>
+
+
+      <div class="card">
+        <img src="https://assets.ajio.com/medias/sys_master/root/20240928/4TqX/66f700f2260f9c41e837d38d/-473Wx593H-420497755-maroon-MODEL.jpg" alt="Product" />
+       <p class="product-price">MRP <span>₹1,299</span></p>
+        <br>
+        <h3 class="product-title">Men Formal Shirt - Netplay</h3>
+
+        <!-- rating button  -->
+
+
+     <button class="cool-button">
+  <h1>4.5⭐</h1>
+</button>
+
+<!-- cart button  -->
+
+<button class="cool-button" style="margin-left: 150px; margin-top:-10px; width: 110px; background-color: rgb(240, 128, 175); display: flex; align-items: center; justify-content: space-between; padding: 5px 10px;">
+  
+  <!-- Minus Button -->
+  <span onclick="decrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">−</span>
+
+  <!-- Cart Icon -->
+  <img src="https://img.icons8.com/?size=60&id=59997&format=png" style="width:20px;" />
+
+  <!-- Plus Button -->
+  <span onclick="incrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">+</span>
+  
+</button>
+<p style="margin-right: 190px; font-weight: bold; margin-top: -20px; margin-left: -6px;">Cart : <span id="cart-count">0</span></p>
+      </div>
+
+      <div class="card">
+        <img src="https://assets.ajio.com/medias/sys_master/root/20240807/Scbo/66b3840c1d763220fa668fae/-473Wx593H-443048161-olive-MODEL.jpg" alt="Product" />
+       <p class="product-price">MRP <span>₹1,299</span></p>
+        <br>
+        <h3 class="product-title">Men Green Shirt - Basics</h3>
+
+        <!-- rating button  -->
+
+
+     <button class="cool-button">
+  <h1>4.5⭐</h1>
+</button>
+
+<!-- cart button  -->
+
+<button class="cool-button" style="margin-left: 150px; margin-top:-10px; width: 110px; background-color: rgb(240, 128, 175); display: flex; align-items: center; justify-content: space-between; padding: 5px 10px;">
+  
+  <!-- Minus Button -->
+  <span onclick="decrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">−</span>
+
+  <!-- Cart Icon -->
+  <img src="https://img.icons8.com/?size=60&id=59997&format=png" style="width:20px;" />
+
+  <!-- Plus Button -->
+  <span onclick="incrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">+</span>
+  
+</button>
+<p style="margin-right: 190px; font-weight: bold; margin-top: -20px; margin-left: -6px;">Cart : <span id="cart-count">0</span></p>
+      </div>
+
+      <div class="card">
+        <img src="https://assets.ajio.com/medias/sys_master/root/20241024/gTG4/671a32def9b8ef490bdbc115/-473Wx593H-443053388-ltgreen-MODEL.jpg" alt="Product" />
+  <p class="product-price">MRP <span>₹1,299</span></p>
+        <br>
+        <h3 class="product-title">Men Plain Light Green - PE</h3>
+
+        <!-- rating button  -->
+
+
+     <button class="cool-button">
+  <h1>4.5⭐</h1>
+</button>
+
+<!-- cart button  -->
+
+<button class="cool-button" style="margin-left: 150px; margin-top:-10px; width: 110px; background-color: rgb(240, 128, 175); display: flex; align-items: center; justify-content: space-between; padding: 5px 10px;">
+  
+  <!-- Minus Button -->
+  <span onclick="decrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">−</span>
+
+  <!-- Cart Icon -->
+  <img src="https://img.icons8.com/?size=60&id=59997&format=png" style="width:20px;" />
+
+  <!-- Plus Button -->
+  <span onclick="incrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">+</span>
+  
+</button>
+<p style="margin-right: 190px; font-weight: bold; margin-top: -20px; margin-left: -6px;">Cart : <span id="cart-count">0</span></p>
+      </div>
+
+
+      <!-- WOMEN'S SECTION  -->
+
+      <div class="card">
+        <img src="https://assets.ajio.com/medias/sys_master/root/20250311/ysGz/67d02d1a59f83539802f4022/-473Wx593H-443067516-wine-MODEL.jpg" alt="Product" />
+       <p class="product-price">MRP <span>₹1,299</span></p>
+        <br>
+        <h3 class="product-title">Floral Kurta with Pants Set</h3>
+
+        <!-- rating button  -->
+
+
+     <button class="cool-button">
+  <h1>4.5⭐</h1>
+</button>
+
+<!-- cart button  -->
+
+<button class="cool-button" style="margin-left: 150px; margin-top:-10px; width: 110px; background-color: rgb(240, 128, 175); display: flex; align-items: center; justify-content: space-between; padding: 5px 10px;">
+  
+  <!-- Minus Button -->
+  <span onclick="decrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">−</span>
+
+  <!-- Cart Icon -->
+  <img src="https://img.icons8.com/?size=60&id=59997&format=png" style="width:20px;" />
+
+  <!-- Plus Button -->
+  <span onclick="incrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">+</span>
+  
+</button>
+<p style="margin-right: 190px; font-weight: bold; margin-top: -20px; margin-left: -6px;">Cart : <span id="cart-count">0</span></p>
+      </div>
+      
+      <div class="card">
+        <img src="https://assets.ajio.com/medias/sys_master/root/20240403/EFN7/660d6f7105ac7d77bbf3eb10/-473Wx593H-443040077-offwhite-MODEL.jpg" alt="Product" />
+     <p class="product-price">MRP <span>₹1,299</span></p>
+        <br>
+        <h3 class="product-title">Women Fashion   - Netplay</h3>
+
+        <!-- rating button  -->
+
+
+     <button class="cool-button">
+  <h1>4.5⭐</h1>
+</button>
+
+<!-- cart button  -->
+
+<button class="cool-button" style="margin-left: 150px; margin-top:-10px; width: 110px; background-color: rgb(240, 128, 175); display: flex; align-items: center; justify-content: space-between; padding: 5px 10px;">
+  
+  <!-- Minus Button -->
+  <span onclick="decrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">−</span>
+
+  <!-- Cart Icon -->
+  <img src="https://img.icons8.com/?size=60&id=59997&format=png" style="width:20px;" />
+
+  <!-- Plus Button -->
+  <span onclick="incrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">+</span>
+  
+</button>
+<p style="margin-right: 190px; font-weight: bold; margin-top: -20px; margin-left: -6px;">Cart : <span id="cart-count">0</span></p>
+      </div>
+
+
+      <div class="card">
+        <img src="https://assets.ajio.com/medias/sys_master/root/20241230/Nitg/6772a5580f47f80c872b502d/-473Wx593H-469689339-red-MODEL.jpg" alt="Product" />
+        <p class="product-price">MRP <span>₹1,299</span></p>
+        <br>
+        <h3 class="product-title">Modern Wear Red - H&M</h3>
+
+        <!-- rating button  -->
+
+
+     <button class="cool-button">
+  <h1>4.5⭐</h1>
+</button>
+
+<!-- cart button  -->
+
+<button class="cool-button" style="margin-left: 150px; margin-top:-10px; width: 110px; background-color: rgb(240, 128, 175); display: flex; align-items: center; justify-content: space-between; padding: 5px 10px;">
+  
+  <!-- Minus Button -->
+  <span onclick="decrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">−</span>
+
+  <!-- Cart Icon -->
+  <img src="https://img.icons8.com/?size=60&id=59997&format=png" style="width:20px;" />
+
+  <!-- Plus Button -->
+  <span onclick="incrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">+</span>
+  
+</button>
+<p style="margin-right: 190px; font-weight: bold; margin-top: -20px; margin-left: -6px;">Cart : <span id="cart-count">0</span></p>
+</div>
+
+
+      <div class="card">
+        <img src="https://assets.ajio.com/medias/sys_master/root/20241015/yWIT/670e1d91260f9c41e8785b86/-473Wx593H-443047493-blackcharcoal-MODEL.jpg" alt="Product" />
+        <p class="product-price">MRP <span>₹1,299</span></p>
+        <br>
+        <h3 class="product-title">Modern Wear Black - H&M</h3>
+
+        <!-- rating button  -->
+
+
+     <button class="cool-button">
+  <h1>4.5⭐</h1>
+</button>
+
+<!-- cart button  -->
+
+<button class="cool-button" style="margin-left: 150px; margin-top:-10px; width: 110px; background-color: rgb(240, 128, 175); display: flex; align-items: center; justify-content: space-between; padding: 5px 10px;">
+  
+  <!-- Minus Button -->
+  <span onclick="decrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">−</span>
+
+  <!-- Cart Icon -->
+  <img src="https://img.icons8.com/?size=60&id=59997&format=png" style="width:20px;" />
+
+  <!-- Plus Button -->
+  <span onclick="incrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">+</span>
+  
+</button>
+<p style="margin-right: 190px; font-weight: bold; margin-top: -20px; margin-left: -6px;">Cart : <span id="cart-count">0</span></p>
+</div>
+      <div class="card">
+        <img src="https://assets.ajio.com/medias/sys_master/root/20231220/smyh/6582d75addf7791519dc963f/-473Wx593H-4900526990-multi-MODEL.jpg" alt="Product" />
+        <p class="product-price">MRP <span>₹1,299</span></p>
+        <br>
+        <h3 class="product-title">Nivea Body Milk Cream</h3>
+
+        <!-- rating button  -->
+
+
+     <button class="cool-button">
+  <h1>4.5⭐</h1>
+</button>
+
+<!-- cart button  -->
+
+<button class="cool-button" style="margin-left: 150px; margin-top:-10px; width: 110px; background-color: rgb(240, 128, 175); display: flex; align-items: center; justify-content: space-between; padding: 5px 10px;">
+  
+  <!-- Minus Button -->
+  <span onclick="decrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">−</span>
+
+  <!-- Cart Icon -->
+  <img src="https://img.icons8.com/?size=60&id=59997&format=png" style="width:20px;" />
+
+  <!-- Plus Button -->
+  <span onclick="incrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">+</span>
+  
+</button>
+<p style="margin-right: 190px; font-weight: bold; margin-top: -20px; margin-left: -6px;">Cart : <span id="cart-count">0</span></p>
+</div>
+      <div class="card">
+        <img src="https://assets.ajio.com/medias/sys_master/root/20241218/ubKt/676259f4c148fa1b3046c5b9/-473Wx593H-4919343430-1000-MODEL.jpg" alt="Product" />
+        <p class="product-price">MRP <span>₹1,299</span></p>
+        <br>
+        <h3 class="product-title">Loreal Paris Oil Shampoo</h3>
+
+        <!-- rating button  -->
+
+
+     <button class="cool-button">
+  <h1>4.5⭐</h1>
+</button>
+
+<!-- cart button  -->
+
+<button class="cool-button" style="margin-left: 150px; margin-top:-10px; width: 110px; background-color: rgb(240, 128, 175); display: flex; align-items: center; justify-content: space-between; padding: 5px 10px;">
+  
+  <!-- Minus Button -->
+  <span onclick="decrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">−</span>
+
+  <!-- Cart Icon -->
+  <img src="https://img.icons8.com/?size=60&id=59997&format=png" style="width:20px;" />
+
+  <!-- Plus Button -->
+  <span onclick="incrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">+</span>
+  
+</button>
+<p style="margin-right: 190px; font-weight: bold; margin-top: -20px; margin-left: -6px;">Cart : <span id="cart-count">0</span></p>
+</div>
+      <div class="card">
+        <img src="https://assets.ajio.com/medias/sys_master/root/20240311/KJ8G/65eef3c405ac7d77bba87a99/-473Wx593H-4943968010-multi-MODEL.jpg" alt="Product" />
+        <p class="product-price">MRP <span>₹1,299</span></p>
+        <br>
+        <h3 class="product-title">Adidas Fresh Fragrance </h3>
+
+        <!-- rating button  -->
+
+
+     <button class="cool-button">
+  <h1>4.5⭐</h1>
+</button>
+
+<!-- cart button  -->
+<button class="cool-button" style="margin-left: 150px; margin-top:-10px; width: 110px; background-color: rgb(240, 128, 175); display: flex; align-items: center; justify-content: space-between; padding: 5px 10px;">
+  
+  <!-- Minus Button -->
+  <span onclick="decrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">−</span>
+
+  <!-- Cart Icon -->
+  <img src="https://img.icons8.com/?size=60&id=59997&format=png" style="width:20px;" />
+
+  <!-- Plus Button -->
+  <span onclick="incrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">+</span>
+  
+</button>
+<p style="margin-right: 190px; font-weight: bold; margin-top: -20px; margin-left: -6px;">Cart : <span id="cart-count">0</span></p>
+</div>
+
+
+
+      <div class="card">
+        <img src="https://assets.ajio.com/medias/sys_master/root/20241203/MYb1/674ec374c148fa1b300b967a/-473Wx593H-4928755180-multi-MODEL.jpg" alt="Product" />
+        <p class="product-price">MRP <span>₹1,299</span></p>
+        <br>
+        <h3 class="product-title">Garnier Clear Face Wash</h3>
+
+        <!-- rating button  -->
+
+
+     <button class="cool-button">
+  <h1>4.5⭐</h1>
+</button>
+
+<!-- cart button  -->
+
+<button class="cool-button" style="margin-left: 150px; margin-top:-10px; width: 110px; background-color: rgb(240, 128, 175); display: flex; align-items: center; justify-content: space-between; padding: 5px 10px;">
+  
+  <!-- Minus Button -->
+  <span onclick="decrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">−</span>
+
+  <!-- Cart Icon -->
+  <img src="https://img.icons8.com/?size=60&id=59997&format=png" style="width:20px;" />
+
+  <!-- Plus Button -->
+  <span onclick="incrementCart()" style="cursor: pointer; font-weight: bold; font-size: 18px;">+</span>
+  
+</button>
+<p style="margin-right: 190px; font-weight: bold; margin-top: -20px; margin-left: -6px;">Cart : <span id="cart-count">0</span></p>
+
+</div>
+
+
+
+
+      
+
+    </div>
+  </div>
+
+  <!-- footer  -->
+
+  <br>
+
+<footer id="footer">
+  <div class="col col1">
+    <h3>Dressily</h3>
+    <p>Crafted with <span style="color: #BA6573;">❤</span> by Deepthika</p>
+    <p style="color: #818181; font-size: smaller">2025 © All Rights Reserved</p>
+  </div>
+  <div class="col col2">
+    <p>About</p>
+    <p>Our mission</p>
+    <p>Privacy Policy</p>
+    <p>Terms of service</p>
+  </div>
+  <div class="col col3">
+    <p>Services</p>
+    <p>Products</p>
+    <p>Join our team</p>
+    <p>Partner with us</p>
+  </div>
+  <div class="backdrop"></div>
+</footer>
+
+
+  
+<script>
+  let cartCount = 0;
+
+  function updateCartDisplay() {
+    // Update all cart-count spans
+    const cartSpans = document.querySelectorAll('#cart-count');
+    cartSpans.forEach(span => {
+      span.textContent = cartCount;
+    });
+  }
+
+  function incrementCart() {
+    cartCount++;
+    updateCartDisplay();
+  }
+
+  function decrementCart() {
+    if (cartCount > 0) {
+      cartCount--;
+      updateCartDisplay();
+    }
+  }
+</script>
+
+</body>
+
+
+
+</html>
